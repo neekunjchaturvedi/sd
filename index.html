@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body
+    class="bg-gray-900 text-gray-100 font-sans leading-normal tracking-normal"
+  >
+    <button
+      id="openSidebarBtn"
+      class="fixed top-4 left-4 text-gray-400 hover:text-white md:hidden z-30"
+      onclick="toggleSidebar()"
+    >
+      <i class="fa fa-bars text-2xl"></i>
+    </button>
+
+    <aside
+      id="sidebar"
+      class="fixed top-0 left-0 h-full w-60 bg-gray-800 flex flex-col items-center shadow-lg z-20 transition-transform transform md:translate-x-0 -translate-x-full"
+    >
+      <button
+        id="closeSidebarBtn"
+        class="absolute top-4 right-4 text-gray-400 hover:text-white md:hidden"
+        onclick="toggleSidebar()"
+      >
+        <i class="fa fa-times"></i>
+      </button>
+      <nav class="space-y-6 mt-20">
+        <div class="flex flex-col items-center space-y-2">
+          <div
+            class="w-24 h-24 bg-cover bg-center rounded-full"
+            style="
+              background-image: url('/assets/bgimg%20hero%20section.png');
+              background-repeat: no-repeat;
+            "
+          ></div>
+          <div class="text-lg text-center">Sujay Daniel</div>
+        </div>
+
+        <div class="flex justify-evenly w-48 text-xl my-4">
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-discord"></i></a>
+        </div>
+
+        <div class="space-y-3">
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-house"></i>
+            <a href="#home" class="text-gray-400 hover:text-white text-xl"
+              >Home</a
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-circle-info"></i>
+            <a href="#about" class="text-gray-400 hover:text-white text-xl"
+              >About</a
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-file"></i>
+            <a href="#projects" class="text-gray-400 hover:text-white text-xl"
+              >Projects</a
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fa-brands fa-android"></i>
+            <a href="#experience" class="text-gray-400 hover:text-white text-xl"
+              >Work & Experience</a
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-gear"></i>
+            <a href="#services" class="text-gray-400 hover:text-white text-xl"
+              >Services</a
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="#contact" class="text-gray-400 hover:text-white text-xl"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </nav>
+    </aside>
+
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black opacity-50 z-10 hidden md:hidden"
+      onclick="toggleSidebar()"
+    ></div>
+
+    <main class="md:ml-60 p-6 space-y-16">
+      <!-- Home Section -->
+      <section
+        id="home"
+        class="flex flex-col md:flex-row items-center justify-center h-screen bg-gray-900 px-10"
+      >
+        <div class="text-center">
+          <h1 class="text-4xl font-bold text-center">Sujay Daniel</h1>
+          <p class="text-gray-400 text-xl mt-2 text-center">
+            I'm<span id="typing-text"></span>
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 p-10">
+            <button
+              id="abt"
+              class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+              onclick="aboutbtn()"
+            >
+              About Me
+            </button>
+            <button
+              class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+              id="resume"
+              onclick="openresume()"
+            >
+              My Resume
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="my-20 px-6 py-20">
+        <h2 class="text-3xl font-semibold text-center mb-8">About Me</h2>
+        <p class="text-gray-300 text-center mx-auto max-w-xl">
+          I am a dedicated Cross Platform Application developer with expertise
+          in Flutter framework, specializing in building responsive and
+          user-friendly applications. I am passionate about technology and
+          always eager to learn new things.
+        </p>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="my-20 px-6 py-20">
+        <h2 class="text-3xl font-semibold text-center mb-8">Projects</h2>
+        <div class="grid md:grid-cols-3 gap-6 ml-30">
+          <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold">Project One</h3>
+            <p class="text-gray-400 mt-2">
+              Description of your first project goes here.
+            </p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold">Project Two</h3>
+            <p class="text-gray-400 mt-2">
+              Description of your second project goes here.
+            </p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold">Project Three</h3>
+            <p class="text-gray-400 mt-2">
+              Description of your third project goes here.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="my-20 px-6 py-20">
+        <h2 class="text-3xl font-semibold text-center mb-8">Experience</h2>
+        <div class="relative space-y-6">
+          <div class="absolute left-2 bg-blue-500 w-1 h-full"></div>
+          <div class="relative flex items-center space-x-4">
+            <div class="bg-blue-500 h-4 w-4 rounded-full"></div>
+            <div class="bg-gray-800 p-4 rounded-lg shadow-md w-full">
+              <h3 class="text-xl font-semibold">Company One</h3>
+              <p class="text-gray-400">Role, Date</p>
+            </div>
+          </div>
+          <div class="relative flex items-center space-x-4">
+            <div class="bg-blue-500 h-4 w-4 rounded-full"></div>
+            <div class="bg-gray-800 p-4 rounded-lg shadow-md w-full">
+              <h3 class="text-xl font-semibold">Company Two</h3>
+              <p class="text-gray-400">Role, Date</p>
+            </div>
+          </div>
+          <div class="relative flex items-center space-x-4">
+            <div class="bg-blue-500 h-4 w-4 rounded-full"></div>
+            <div class="bg-gray-800 p-4 rounded-lg shadow-md w-full">
+              <h3 class="text-xl font-semibold">Company Three</h3>
+              <p class="text-gray-400">Role, Date</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="my-20 px-6 py-20">
+        <h2 class="text-3xl font-semibold text-center mb-8">Services</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold">Flutter App Development</h3>
+            <p class="text-gray-400 mt-2">
+              I provide high-quality Flutter app development services.
+            </p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold">App Design</h3>
+            <p class="text-gray-400 mt-2">
+              Creating user-centric app designs that align with your brand.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 px-6">
+        <h2 class="text-3xl font-semibold text-center mb-8">Get in Touch</h2>
+
+        <div
+          class="flex flex-col sm:flex-row sm:justify-around px-4 items-center py-4 bg-gray-800 text-center mx-auto rounded-lg space-y-4 sm:space-y-0 sm:space-x-4 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+          id="Contact"
+        >
+          <a
+            href="mailto:neekunjchaturvedi3@gmail.com"
+            class="text-base sm:text-lg font-semibold text-white hover:text-blue-500 transition duration-200 ease-in-out text-center"
+          >
+            <i class="fa-solid fa-envelope mr-2"></i>
+            neekunjchaturvedi3@gmail.com
+          </a>
+          <a
+            class="text-3xl sm:text-4xl"
+            href="https://www.linkedin.com/in/neekunj-chaturvedi-293223257/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

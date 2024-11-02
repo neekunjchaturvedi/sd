@@ -1,0 +1,17 @@
+/* Sidebar transition styles */
+.sidebar {
+  transition: transform 0.3s ease;
+}
+
+.translate-x-0 {
+  transform: translateX(0);
+}
+
+.-translate-x-full {
+  transform: translateX(-100%);
+}
+
+/* Overlay styles */
+#overlay.active {
+  display: block;
+}
