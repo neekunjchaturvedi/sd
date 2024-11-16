@@ -111,3 +111,10 @@ function toggleSidebar() {
   overlay.classList.toggle("hidden");
   overlay.classList.toggle("active");
 }
+
+function collarlink() {
+  window.open("https://github.com/chintu4/collarlink", "blank");
+}
+function bmi() {
+  window.open("https://github.com/Dany4950/bmi-calculator", "blank");
+}

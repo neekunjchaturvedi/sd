@@ -39,7 +39,7 @@
           <div
             class="w-24 h-24 bg-cover bg-center rounded-full"
             style="
-              background-image: url('/assets/bgimg%20hero%20section.png');
+              background-image: url('/assets/profiledp-removebg-preview.png');
               background-repeat: no-repeat;
             "
           ></div>
@@ -156,20 +156,23 @@
           user-friendly applications. I am passionate about technology and
           always eager to learn new things. Coupled with good communication
           skills and great leadership traits i promise to bring out great result
-          for all aspects in my domain.
+          for all aspects in my domain. I have great Expertise in building User
+          Interfaces coupled with great designing skills help me put life into
+          the User Experience.
         </p>
       </section>
 
       <!-- Projects Section -->
       <section id="projects" class="my-20 px-6 py-20">
         <h2 class="text-3xl font-semibold text-center mb-8">Projects</h2>
-        <div class="grid md:grid-cols-3 gap-6 ml-30">
+        <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-6 ml-30">
           <div class="bg-gray-800 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold">CollarLink</h3>
             <video
-              src="/assets/WhatsApp Video 2024-11-01 at 20.30.10.mp4"
+              src="/assets/Collarlink.mp4"
               class="p-3 rounded h-72 mx-auto"
               autoplay
+              loop
               muted
             ></video>
             <p class="text-gray-400 mt-2">
@@ -180,6 +183,13 @@
               job uncertainty, providing workers with secure, reliable work
               options.
             </p>
+            <button
+              id="abt"
+              class="bg-gray-900 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mt-4"
+              onclick="collarlink()"
+            >
+              Github
+            </button>
           </div>
           <div class="bg-gray-800 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold">BMI Calculator</h3>
@@ -187,6 +197,7 @@
               src="/assets/bmi.mp4"
               class="p-3 rounded h-72 mx-auto"
               autoplay
+              loop
               muted
             ></video>
             <p class="text-gray-400 mt-2">
@@ -196,20 +207,34 @@
               quick insight into health risks related to weight. Helps people
               maintain healthy weight ranges.
             </p>
+            <button
+              id="abt"
+              class="bg-gray-900 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mt-4"
+              onclick="bmi()"
+            >
+              Github
+            </button>
           </div>
           <div class="bg-gray-800 p-4 rounded-lg shadow-md">
-            <h3 class="text-xl font-semibold">Outstagram</h3>
-            <video
-              src="/assets/outstagram.mp4"
-              class="p-3 rounded h-72 mx-auto"
-              autoplay
-              muted
-            ></video>
+            <h3 class="text-xl font-semibold">GeoDroid</h3>
+            <img src="/assets/goedroid.jpeg" class="p-3 rounded h-72 mx-auto" />
 
             <p class="text-gray-400 mt-2">
-              A rough clone of original Instagram named Outstagram
+              Built a user and admin pannel geolocator application , which
+              tracks your live location and marks your route to a set
+              destination , Used google cloud platform for google maps api
             </p>
           </div>
+          <!-- <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold">SpeakGPT</h3>
+            <img src="/assets/goedroid.jpeg" class="p-3 rounded h-72 mx-auto" />
+
+            <p class="text-gray-400 mt-2">
+              Built a user and admin pannel geolocator application , which
+              tracks your live location and marks your route to a set
+              destination , Used google cloud platform for google maps api
+            </p>
+          </div> -->
         </div>
       </section>
 
