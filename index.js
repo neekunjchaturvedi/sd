@@ -51,41 +51,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Send Email using EmailJS (Add your EmailJS credentials here)
-function sendEmail() {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
-
-  // Check if all fields are filled
-  if (name && email && message) {
-    email
-      .send({
-        SecureToken: "YOUR_SECURE_TOKEN", // Replace with your actual token
-        To: "you@example.com", // Replace with the receiver's email
-        From: email,
-        Subject: `New message from ${name}`,
-        Body: `
-        <b>Sender:</b> ${name} (${email})<br><br>
-        <b>Message:</b><br>${message}
-      `,
-      })
-      .then((response) => {
-        if (response === "OK") {
-          alert("Message sent successfully");
-        } else {
-          alert("Failed to send message: " + response);
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        alert("An error occurred while sending the message.");
-      });
-  } else {
-    alert("Please fill in all fields");
-  }
-}
-
 function aboutbtn() {
   const abtsection = document.getElementById("about");
   if (abtsection) {
