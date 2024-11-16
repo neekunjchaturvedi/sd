@@ -37,12 +37,10 @@
       <nav class="space-y-6 mt-20">
         <div class="flex flex-col items-center space-y-2">
           <div
-            class="w-24 h-24 bg-cover bg-center rounded-full"
-            style="
-              background-image: url('/assets/profiledp-removebg-preview.png');
-              background-repeat: no-repeat;
-            "
+            id="sidebarImage"
+            class="transition-transform duration-1000"
           ></div>
+          <!-- Empty div for sidebar image -->
           <div class="text-lg text-center">Sujay Daniel</div>
         </div>
 
@@ -111,23 +109,35 @@
         id="home"
         class="flex flex-col md:flex-row items-center justify-center h-screen bg-gray-900 px-10"
       >
-        <div class="text-center">
-          <h1 class="text-4xl font-bold text-center">Sujay Daniel</h1>
-          <p class="text-gray-400 text-xl mt-2 text-center">
-            I'm<span id="typing-text"></span>
-          </p>
+        <div>
+          <div
+            id="profileImage"
+            class="w-72 h-72 bg-cover bg-center rounded-full mx-auto mb-10 transition-transform duration-1000"
+            style="
+              background-image: url('/assets/profiledp-removebg-preview.png');
+              background-repeat: no-repeat;
+            "
+          ></div>
 
-          <div class="flex justify-evenly w-84 text-3xl text-center mt-9">
-            <a href="https://www.linkedin.com/in/sujaydaniel/" target="_blank"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-            <a href="https://github.com/Dany4950" target="_blank"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a href="https://www.instagram.com/sujay_daniel/" target="_blank"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
+          <div class="text-center">
+            <h1 class="text-4xl font-bold text-center">Sujay Daniel</h1>
+            <p class="text-gray-400 text-xl mt-2 text-center">
+              I'm<span id="typing-text"></span>
+            </p>
+
+            <div class="flex justify-evenly w-84 text-3xl text-center mt-9">
+              <a href="https://www.linkedin.com/in/sujaydaniel/" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/Dany4950" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://www.instagram.com/sujay_daniel/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
           </div>
+
           <div class="grid md:grid-cols-2 gap-5 p-10">
             <button
               id="abt"

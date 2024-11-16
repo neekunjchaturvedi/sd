@@ -118,3 +118,34 @@ function collarlink() {
 function bmi() {
   window.open("https://github.com/Dany4950/bmi-calculator", "blank");
 }
+
+window.addEventListener("scroll", () => {
+  const profileImage = document.getElementById("profileImage");
+  const sidebarImage = document.getElementById("sidebarImage");
+
+  if (window.scrollY > 100) {
+    setTimeout(() => {
+      profileImage.classList.add("profile-to-sidebar");
+      profileImage.style.opacity = "0";
+    }, 800);
+
+    setTimeout(() => {
+      sidebarImage.style.backgroundImage = profileImage.style.backgroundImage;
+      sidebarImage.style.width = "120px";
+      sidebarImage.style.height = "120px";
+      sidebarImage.classList.add("rounded-full", "bg-cover", "bg-center");
+      sidebarImage.style.opacity = "1";
+    }, 800);
+  } else {
+    setTimeout(() => {
+      profileImage.classList.remove("profile-to-sidebar");
+      profileImage.style.opacity = "1";
+      sidebarImage.style.opacity = "0";
+    }, 800);
+
+    setTimeout(() => {
+      sidebarImage.style.width = "0";
+      sidebarImage.style.height = "0";
+    }, 800);
+  }
+});

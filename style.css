@@ -11,7 +11,17 @@
   transform: translateX(-100%);
 }
 
-/* Overlay styles */
 #overlay.active {
   display: block;
+}
+
+#profileImage,
+#sidebarImage {
+  transition: transform 1s ease-in-out, opacity 1s;
+}
+
+.moving {
+  transform: translateX(
+    calc(100vw - 50px)
+  ); /* Adjust '50px' to match the sidebar position */
 }
